@@ -1,0 +1,292 @@
+@import 'reset.css';
+@import 'price.css';
+
+:root {
+  --background: rgba(34, 34, 34, 0.85);
+  --logo: #efa91e;
+}
+
+body {
+  background-color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/* tel -------------------------------------------------------------------------------------------*/
+.tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tel-number {
+  color: white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+}
+
+/* navigation styles start here --------------------------------------------------------------*/
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  padding: 1rem 0 2rem;
+  /* top: 0; */
+  font-weight: 600;
+  letter-spacing: 0.16px;
+  z-index: 999;
+  width: 100%;
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(var(--logo), 0.75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* hero ---------------------------------------------------------------------------------*/
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('./media/bg-1section.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* .hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('./media/bg-1section.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+} */
+
+.hero h2 {
+  position: absolute;
+  padding: 2.2rem;
+  background-color: var(--background);
+  text-align: center;
+  /* margin: 0 auto; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.logo {
+  padding-top: 8rem;
+  text-align: center;
+  color: white;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Tahoma, sans-serif;
+  margin: 0;
+}
+
+.logo span {
+  color: var(--logo);
+}
+
+@media (max-width: 492px) {
+  body {
+    font-size: 14px;
+  }
+  header {
+    text-align: right;
+  }
+  .tel {
+    justify-content: flex-end;
+  }
+  .logo {
+    padding-top: 7rem;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .tel-number {
+    padding: 0.3rem 0.5rem;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 260px) {
+  header {
+    height: 3rem;
+  }
+  .tel {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .tel {
+    align-items: flex-end;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: white;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 150ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
