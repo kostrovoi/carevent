@@ -1,5 +1,5 @@
 .price {
-  color: white;
+  color: #fff;
   background-image: url('./media/bg-for-2section.webp');
   background-size: cover;
   background-position: center;
@@ -66,6 +66,15 @@ li.item-link {
   color: white;
 }
 
+/* .equipment-link:visited {
+  color: purple;
+} */
+
+.equipment-link:hover,
+.equipment-link:focus {
+  color: var(--logo);
+}
+
 @media (max-width: 1170px) {
   .card-list__dron {
     margin-top: 0;
@@ -123,3 +132,39 @@ li.item-link {
     margin-left: 0;
   }
 }
+
+/* @media (max-width: 540px) {
+  body {
+    overflow-x: hidden;
+  }
+  .qForm_NextButton {
+    font-size: 4rem;
+    margin: 105px 15px;
+    padding: 32px 155px 32px 35px;
+    border-top: 2px #669999 solid;
+    border-right: 2px #669999 solid;
+    border-bottom: 2px #009900 solid;
+    border-left: 2px #009900 solid;
+    background-color: #E1FBE4;
+    font-weight: bold;
+    color: #006600;
+    background-image: url(/images/qForm_next.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+  input[type="checkbox"], input[type="radio"] {
+    background: transparent;
+    border: 2px solid black;
+    box-shadow: 6px 6px 0px 1px;
+    display: inline-block;
+    padding: 22px 22px;
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+}
+ input[type="checkbox"] + label {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+ }
+} */

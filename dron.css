@@ -1,0 +1,141 @@
+.dron {
+  background-color: black;
+  color: #d1cac9;
+}
+
+.dron-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 0 5rem;
+}
+
+.dron img {
+  max-width: 725px;
+  cursor: pointer;
+  /* flex-grow: 1; */
+}
+
+.dron-proposal {
+  margin: 0 10px 0;
+  max-width: 725px;
+}
+
+.dron-proposal h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 350;
+  margin-bottom: 1rem;
+}
+
+.dron-proposal p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.video {
+  max-width: 725px;
+  flex-grow: 1;
+  position: relative;
+  /* width: 100%; */
+  /* height: 0; */
+  /* padding-bottom: 56.25%; */
+  background-color: black;
+}
+
+.video_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.video_media {
+  width: 725px;
+  height: 405px;
+}
+
+.video__button-shape {
+  fill: #212121;
+  fill-opacity: 0.8;
+}
+
+.video:hover .video__button-shape,
+.video_btn:focus .video__button-shape {
+  fill: #ff0000;
+  fill-opacity: 1;
+}
+
+.video__button-icon {
+  fill: white;
+}
+
+@media (max-width: 1460px) {
+  .video picture {
+    max-width: 625px;
+    /* flex-grow: 1; */
+  }
+  .dron img {
+    max-width: 625px;
+  }
+  .video_media {
+    width: 625px;
+  }
+}
+@media (max-width: 1380px) {
+  .video picture {
+    max-width: 525px;
+    /* flex-grow: 1; */
+  }
+  .dron img {
+    max-width: 525px;
+  }
+  .video_media {
+    width: 525px;
+  }
+}
+@media (max-width: 1360px) {
+  .video picture {
+    max-width: 725px;
+    /* flex-grow: 1; */
+    /* margin: 0px 10px 5rem; */
+    /* margin-bottom: 5rem; */
+  }
+  .dron img {
+    max-width: 725px;
+  }
+  .video_media {
+    width: 725px;
+  }
+
+  .dron-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .dron-proposal {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 725px) {
+  .video_media {
+    width: 100vw;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 575px) {
+  .video_media {
+    width: 100vw;
+    height: 30vh;
+  }
+}
