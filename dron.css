@@ -34,6 +34,7 @@
 .dron-proposal p {
   font-size: 1.4rem;
   font-weight: 400;
+  padding: 0 10px;
 }
 
 .video {
@@ -44,6 +45,7 @@
   /* height: 0; */
   /* padding-bottom: 56.25%; */
   background-color: black;
+  font-size: 0;
 }
 
 .video_btn {
@@ -79,7 +81,7 @@
   fill: white;
 }
 
-@media (max-width: 1460px) {
+@media (max-width: 1500px) {
   .video picture {
     max-width: 625px;
     /* flex-grow: 1; */
@@ -104,6 +106,13 @@
   }
 }
 @media (max-width: 1360px) {
+  .proposal h2,
+  .dron-proposal h2 {
+    font-size: 2.2rem;
+  }
+  .proposal p {
+    font-size: 1.4rem;
+  }
   .video picture {
     max-width: 725px;
     /* flex-grow: 1; */
@@ -119,6 +128,7 @@
 
   .dron-wrapper {
     flex-direction: column-reverse;
+    align-content: center;
   }
 
   .dron-proposal {
@@ -134,8 +144,24 @@
 }
 
 @media (max-width: 575px) {
+  .proposal h2,
+  .dron-proposal h2 {
+    font-size: 1.5rem;
+  }
+  .proposal p,
+  .dron-proposal p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
   .video_media {
     width: 100vw;
     height: 30vh;
+  }
+}
+
+@media (max-width: 405px) {
+  .video_media {
+    width: 100vw;
+    height: 22vh;
   }
 }
