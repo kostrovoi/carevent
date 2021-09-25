@@ -32,8 +32,9 @@
   font-weight: 400;
 }
 
-/* @media (max-width: 1360px) {
+@media (max-width: 1160px) {
   .proposal {
-    flex-direction: column;
+    /* flex-direction: column; */
+    padding: 5rem 0;
   }
-} */
+}

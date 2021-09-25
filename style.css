@@ -15,7 +15,6 @@ body {
     Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  overflow-x: hidden;
 }
 
 /* tel -------------------------------------------------------------------------------------------*/
@@ -30,6 +29,7 @@ body {
   font-size: 1.4rem;
   text-transform: uppercase;
   padding: 0.3rem 1rem;
+  text-decoration: none;
 }
 
 /* navigation styles start here --------------------------------------------------------------*/
@@ -128,8 +128,9 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 
-nav a:hover {
-  color: #ccc;
+nav a:hover,
+nav a:active {
+  color: var(--logo);
 }
 
 .nav-toggle:checked ~ nav {
@@ -141,28 +142,21 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+.menu__list {
+  overflow-y: auto;
+}
+
 /* hero ---------------------------------------------------------------------------------*/
 .hero {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('./media/bg-1section.webp');
+  background-image: url('./media/bg-1section-80per.jpg');
+  /* background-blend-mode: multiply; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-/* .hero::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('./media/bg-1section.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-} */
 
 .hero h2 {
   position: absolute;

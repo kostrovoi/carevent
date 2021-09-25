@@ -5,29 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>carevent</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="header.js"></script>
 </head>
 
 <body>
   <header>
-    <!-- <h1 class="logo"><span>Car</span>Event</h1> -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
+    <label tabindex="1" for="nav-toggle" class="nav-toggle-label">
+        <span></span>
     </label>
     <nav>
-      <ul>
+      <ul class="menu__list">
         <li><a href="#">НАЧАЛО</a></li>
-        <li><a href="#">УСЛУГИ и ЦЕНИ</a></li>
-        <li><a href="#">КАКВО ПРЕДЛАГАМЕ</a></li>
-        <li><a href="#">ЗАСНЕМАНЕ С ДРОН</a></li>
-        <li><a href="#">КОНТАКТИ</a></li>
+        <li><a href="#price">УСЛУГИ и ЦЕНИ</a></li>
+        <li><a href="#proposal">КАКВО ПРЕДЛАГАМЕ</a></li>
+        <li><a href="#dron">ЗАСНЕМАНЕ С ДРОН</a></li>
+        <li><a href="#contacts">КОНТАКТИ</a></li>
       </ul>
     </nav>
     <div class="tel">
       <img src="./media/telephone.webp" class="icon-tel"></img>
-      <span class="tel-number">0890 450 160</span>
+      <a class="tel-number" href="tel:+0890 450 160">0890 450 160</a>
     </div>
   </header>
 
@@ -41,7 +41,7 @@
       <!-- <div class="hero-parallax"></div> -->
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
       <h2>УСЛУГИ и ЦЕНИ</h2>
       <div class="container">
         <div class="row">
@@ -114,8 +114,8 @@
       </div>
     </section>
 
-    <section class="proposal">
-      <img src="media/slider-2.webp" alt="Mercedes S 500">
+    <section class="proposal"  id="proposal">
+      <img src="media/slider-2.jpg" alt="Mercedes S 500">
       <div class="proposal-wrapper">
         <h2>КАКВО ПРЕДЛАГАМЕ</h2>
         <p>Ние предлагаме единствено по рода си
@@ -130,7 +130,7 @@
       </div>
     </section>
 
-    <section class="dron">
+    <section class="dron" id="dron">
       <div class="dron-wrapper">
         <div class="dron-proposal">
           <h2>ЗАСНЕМАНЕ С ДРОН</h2>
@@ -157,6 +157,9 @@
       </div>
     </section>
 
+    <section class="contacts" id="contacts">
+      <form action="" method="post"></form>
+    </section>
   </main>
   <script src="video.js"></script>
 </body>

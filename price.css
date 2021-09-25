@@ -1,6 +1,6 @@
 .price {
   color: #fff;
-  background-image: url('./media/bg-for-2section.webp');
+  background-image: url('./media/bg-for-2section.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,6 +79,13 @@ li.item-link {
   .card-list__dron {
     margin-top: 0;
   }
+  .card {
+    padding: 26px 10px;
+    background-image: url(./media/bg-for-2section.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (max-width: 768px) {
@@ -88,6 +95,8 @@ li.item-link {
   }
 
   .price h2 {
+    padding-top: 6rem;
+    margin-bottom: 4rem;
     font-size: 2.2rem;
   }
 
@@ -108,6 +117,9 @@ li.item-link {
   .card-list__dron {
     margin-left: 1rem;
   }
+  .container {
+    padding: 0;
+  }
 }
 
 @media (max-width: 492px) {
@@ -117,6 +129,8 @@ li.item-link {
   }
 
   .price h2 {
+    padding-top: 5rem;
+    margin-bottom: 3rem;
     font-size: 2rem;
   }
 
