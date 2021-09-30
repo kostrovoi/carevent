@@ -14,7 +14,7 @@
   <header>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label tabindex="1" for="nav-toggle" class="nav-toggle-label">
-        <span></span>
+      <span></span>
     </label>
     <nav>
       <ul class="menu__list">
@@ -114,7 +114,7 @@
       </div>
     </section>
 
-    <section class="proposal"  id="proposal">
+    <section class="proposal" id="proposal">
       <img src="media/slider-2.jpg" alt="Mercedes S 500">
       <div class="proposal-wrapper">
         <h2>КАКВО ПРЕДЛАГАМЕ</h2>
@@ -151,14 +151,56 @@
             </picture>
           </a>
           <button class="video_btn" aria-label="play video">
-            <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+            <svg width="68" height="48" viewBox="0 0 68 48">
+              <path class="video__button-shape"
+                d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+              </path>
+              <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+            </svg>
           </button>
         </div>
       </div>
     </section>
 
     <section class="contacts" id="contacts">
-      <form action="" method="post"></form>
+      <div class="contactUs">
+        <div class="contactUs__title">
+          <h2>СВЪРЖЕТЕ СЕ С НАС</h2>
+        </div>
+      </div>
+      <div class="box container">
+        <div class="contact contact__form">
+          <form class="form" action="" method="post">
+            <div class="form__box">
+              <!-- <div class="row__50"> -->
+              <div class="input__box">
+                <label for="name">
+                </label>
+                  <input class="input" type="text" id="name" value="" placeholder="Име *" required>
+              </div>
+              <div class="input__box">
+                <label for="email">
+                </label>
+                  <input class="input" type="email" id="email" value="" placeholder="Email *" required>
+              </div>
+              <div class="input__box">
+                <label for="topic">
+                </label>
+                  <input class="input" type="text" id="topic" value="" placeholder="Тема">
+              </div>
+              <div class="input__box">
+                <label for="message">
+                </label>
+                  <textarea class="input" type="text" id="message" value="" placeholder="Съобщение"></textarea>
+              </div>
+              <div class="input__box">
+                <input class="input-btn btn-reset" type="submit" value="Изпрати">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="contact contact__info"></div>
+      </div>
     </section>
   </main>
   <script src="video.js"></script>
