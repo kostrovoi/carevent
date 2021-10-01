@@ -1,4 +1,5 @@
 .dron {
+  padding: 40px 0;
   background-color: black;
   color: #d1cac9;
 }
@@ -144,6 +145,9 @@
 }
 
 @media (max-width: 575px) {
+  .dron {
+    padding: 0;
+  }
   .proposal h2,
   .dron-proposal h2 {
     font-size: 1.5rem;

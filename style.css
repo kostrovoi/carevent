@@ -189,6 +189,12 @@ nav a:active {
   color: var(--logo);
 }
 
+@media (max-width: 1190px) {
+  header {
+    padding: 1rem 0 1rem;
+  }
+}
+
 @media (max-width: 492px) {
   body {
     font-size: 14px;
